@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaya Sai</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="Dark.jpg">
+</head>
+
+<body>
+  <nav>
+    <a onclick="scrollToPercentage(0)">Home</a>
+    <a onclick="scrollToPercentage(40)">About me</a>
+    <a onclick="scrollToPercentage(93)">Projects</a>
+    <a onclick="scrollToPercentage(100)">Contact</a>
+  </nav>
+
+  <div class="home" id="home">
+    <h1 class="title"><span>Jayasai</span> Banavath</h1>
+    <h3 class="quote">I'm a passionate Front-end Developer</h3>
+  </div>
+
+  <div class="about">
+    <div class="cont-abt">
+      <h2 class="abt-t">About Me</h2>
+      <p>I'm a hard-working engineering graduate specialised in Electrical and Electronics Engineering. I'm skilled in C, Java, HTML, CSS, SQL, Python. I craft efficient and scalable solutions. My Hobbies are watching animated series, reading books, listening to music, and I love travelling.</p>
+    </div>
+    <div class="img-abt">
+      <img src="Img.png" alt="Not found">
+    </div>
+  </div>
+
+  <div class="projects">
+    <h1 class="proj">Projects</h1>
+    <div class="cards">
+      <div class="card">
+        <h2 class="proj-t">ACADEMIC PROJECT</h2>
+        <p>Simulation studies on power quality enhancement on grid-connected multi-level inverter using APOD technique.</p>
+        <ul>
+          <li>PD("PHASE OPOSITION")</li>
+          <li>VFPD("VARIABLE FREQUENCY PHASE OPPOSITION")</li>
+          <li>POD("PHASE OPPOSITION AND DISPOSITION")</li>
+          <li>VFPOD("VARIABLE FREQUENCY PHASE OPPOSITION AND DISPOSITION")</li>
+          <li>APOD("ALTERNATE PHASE OPPOSITION AND DISPOSITION")</li>
+          <li>VFAPOD("VARIABLE FREQUENCY ALTERNATE PHASE OPPOSITION AND DISPOSITION")</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="proj-t">MINI PROJECT'S</h2>
+        <p>Developed a personal portfolio website using HTML, CSS. Responsive design and interactive navigation to showcase education, skills, and projects.
+            and developed a game known as TIC-TAC-TOE game by using JAVA concepts with an AI Player.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://github.com/sai-1413" target="_blank" class="social-icon">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/feed/" target="_blank" class="social-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:jayasaibanavath@gmail.com" target="_blank" class="social-icon">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <script>
+    function scrollToPercentage(percentage) {
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPosition = height * (percentage / 100);
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>

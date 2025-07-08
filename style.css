@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  background-color: rgba(82, 82, 82, 0.253);
+  padding: 15px 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 25px;
+  font-size: 16px;
+  margin: auto;
+  backdrop-filter: blur(15px);
+  transition: ease 300ms;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(153, 153, 153);
+  font-weight: 600;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background: url(Will.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: aliceblue;
+  text-align: center;
+  transition: ease 500ms;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.3);
+  }
+}
+
+.animated-text {
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards;
+}
+
+.animated-text:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-section {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 72px;
+  z-index: 1;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.quote {
+  font-size: 28px;
+  color: rgb(255, 245, 103);
+  z-index: 1;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 10vw;
+  gap: 40px;
+  background: radial-gradient(circle at top left, #333, #000);
+}
+
+.cont-abt {
+  flex: 1 1 400px;
+}
+
+.abt-t {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.cont-abt p {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 2;
+}
+
+.img-abt {
+  flex: 1 1 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.img-abt img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ffd700;
+  transition: transform 0.4s ease;
+}
+
+.img-abt img:hover {
+  transform: scale(1.1);
+}
+
+.projects {
+  padding: 60px 10vw;
+  background: linear-gradient(to right, #111, #1a1a1a);
+}
+
+.proj {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00ffff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgba(22, 22, 22, 0.9);
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.proj-t {
+  color: #ff9800;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p,
+.card ul {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ff88885b;
+}
+
+.social-icon {
+  margin: 0 15px;
+}
+
+.social-icon i {
+  font-size: 26px;
+  transition: color 0.2s;
+  color: white;
+}
+
+.social-icon i:hover {
+  color: rgb(0, 0, 0);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .quote {
+    font-size: 20px;
+  }
+
+  .abt-t {
+    font-size: 32px;
+  }
+
+  .cont-abt p {
+    font-size: 18px;
+  }
+
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact p {
+    font-size: 16px;
+  }
+}
